@@ -1,13 +1,6 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
+[]
 
 config_version=4
-
 _global_script_classes=[ {
 "base": "Reference",
 "class": "ColorMath",
@@ -56,7 +49,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Ihrovary JAM2025  TRACE"
+config/name="Object014 (TRACE alpha)"
 run/main_scene="res://Client.tscn"
 boot_splash/image="res://scenes/loader/textures/Back1.png"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )

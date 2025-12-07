@@ -116,7 +116,9 @@ func _physics_process(delta):
 			
 			for am in $Level1.time.keys():
 				if time > $Level1.time[am]: Options.AM.text = am
-				else: Options.AM.text = '0:00 AM'
+				else: 
+					print(time)
+					Options.AM.text = '0:00 AM'
 			
 			if time < $Level1.time['5:00 AM']:
 				if way.size() > 0:

@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://actors/ui/NavButton.gd" type="Script" id=1]
+[ext_resource path="res://ui/utils/fonts/PixelWrite.tres" type="DynamicFont" id=2]
+[ext_resource path="res://ui/utils/fonts/Pixel.tres" type="DynamicFont" id=3]
+[ext_resource path="res://ui/pause/Pause.gd" type="Script" id=4]
+[ext_resource path="res://ui/pause/zhivoy-zvuk-sverchki-noch.mp3" type="AudioStream" id=5]
+
+[node name="Pause" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 1.0
+margin_right = -1.0
+margin_bottom = -29.0
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 920.0
+margin_right = 980.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 3 )
+text = "pause"
+
+[node name="Resume" type="TextureButton" parent="."]
+margin_left = 817.0
+margin_top = 100.0
+margin_right = 1103.0
+margin_bottom = 178.0
+script = ExtResource( 1 )
+config_ui = [ "Back" ]
+
+[node name="Label" type="Label" parent="Resume"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -109.0
+margin_top = -22.0
+margin_right = 109.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 2 )
+text = "Продовжити"
+
+[node name="Options" type="TextureButton" parent="."]
+margin_left = 817.0
+margin_top = 165.0
+margin_right = 1103.0
+margin_bottom = 243.0
+script = ExtResource( 1 )
+config_ui = [ "Level", "Options", "NavBack" ]
+
+[node name="Label" type="Label" parent="Options"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -124.0
+margin_top = -22.0
+margin_right = 124.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 2 )
+text = "Налаштування"
+
+[node name="Back" type="TextureButton" parent="."]
+margin_left = 817.0
+margin_top = 225.0
+margin_right = 1103.0
+margin_bottom = 296.0
+script = ExtResource( 1 )
+config_ui = [ "Backmenu", "Menu" ]
+
+[node name="Label" type="Label" parent="Back"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.0
+margin_top = -22.0
+margin_right = 108.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 2 )
+text = "Повернутись"
+
+[node name="Exit" type="TextureButton" parent="."]
+margin_left = 817.0
+margin_top = 290.0
+margin_right = 1103.0
+margin_bottom = 361.0
+script = ExtResource( 1 )
+config_ui = [  ]
+
+[node name="Label" type="Label" parent="Exit"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -57.0
+margin_top = -22.0
+margin_right = 57.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 2 )
+text = "Вийти"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -20.0
+autoplay = true
